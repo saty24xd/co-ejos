@@ -1,0 +1,138 @@
+/* Estilos para la barra de título */
+.title-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3a3835;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'Garamond', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-bar .left {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.title-bar .left img {
+    height: 40px;
+    width: 100px;
+}
+
+.title-bar .middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.title-bar .middle img {
+    max-height: 40px;
+}
+
+.title-bar .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.title-bar .right a {
+    margin-right: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para la navbar */
+.navbar {
+    background-color: #ffffffef;
+    color: #000000;
+    font-family: 'Garamond', sans-serif;
+    margin-top: 60px; /* Ajusta el margen superior */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Estilos para el contenido principal */
+
+.main-content {
+    background-image: url('rabbits.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 900px;
+    padding: 20px;
+    font-family: 'Garamond', sans-serif; 
+    color: #080808;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-content .left {
+    width: 300px;
+}
+
+.main-content .left h2 {
+    margin-top: -350px; /* Aumentamos el margen superior para mover el título más abajo */
+    font-weight: 700;
+    font-size: 48px; /* Aumentamos el tamaño del título */
+}
+
+.main-content .left p {
+    margin-top: 10px;
+    font-size: 15px; /* Aumentamos el tamaño del párrafo */
+}
+
+.main-content .left button {
+    margin-top: 10px;
+    padding: 12px 18px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    font-family: 'Garamond', sans-serif; /* Cambiamos la fuente a Optima */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-content .left button:hover {
+    background-color: #333333;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #3a3835;
+    color: #ffffff;
+    font-family: 'Garamond', sans-serif;
+    padding: 1px;
+    text-align: center;
+}

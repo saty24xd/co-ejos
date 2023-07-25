@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set the title of the webpage -->
+    <title>Productos - Coñejos Lindos</title>
+
+    <!-- Link the external CSS files -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="products.styles.css">
+
+    <!-- Include the Hack font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hack&display=swap" rel="stylesheet">
+
+    <!-- Set the favicon of the webpage -->
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <!-- Barra de título -->
+    <header class="title-bar">
+        <div class="left">
+            <!-- Add a link to the logo2.png image -->
+            <a href="index.html">
+                <img src="logo2.png" alt="Palabra">
+            </a>
+        </div>
+        <div class="middle">
+            <!-- Display the second logo image -->
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="right">
+            <!-- Display navigation links -->
+            <a href="index.html">INICIO</a>
+            <a href="gallery.html">GALERÍA</a>
+            <a href="products.html">PRODUCTOS</a>
+            <a href="contact.html">CONTACTO</a>
+        </div>
+    </header>
+
+    <!-- Contenido de la página de productos -->
+    <div class="products-container">
+        <h1>Productos</h1>
+        <div class="category-selector">
+            <button class="category-btn" data-category="todos">Todos</button>
+            <button class="category-btn" data-category="alimentos">Alimentos</button>
+            <button class="category-btn" data-category="juguetes">Juguetes</button>
+            <button class="category-btn" data-category="accesorios">Accesorios</button>
+        </div>
+        <div class="product-list" id="product-list"></div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2023 Coñejos Lindos by saty24xd. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>

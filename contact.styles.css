@@ -1,0 +1,83 @@
+/* Estilos para el contenido de la página de contacto */
+
+.contact-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-family: 'Hack', monospace;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-item {
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-item a {
+    display: block;
+}
+
+.contact-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.contact-item p {
+    margin-top: 10px;
+    font-family: 'Hack', monospace;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+}
+
+.animated-gif {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#left-bunny {
+    left: 50px;
+    background-image: url("contact-pics/left-bunny.gif");
+}
+
+#right-bunny {
+    right: 50px;
+    background-image: url("contact-pics/right-bunny.gif");
+}
+
+/* Keyframes for Icon Animation */
+@keyframes fade-in-icon {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Keyframes only to Icons and p text */
+.contact-item img, .contact-item p {
+    animation: fade-in-icon 1s ease;
+}

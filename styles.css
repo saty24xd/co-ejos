@@ -1,18 +1,23 @@
 /* Estilos para la barra de título */
 .title-bar {
+    /* Set the position and dimensions of the title bar */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
+    /* Set the background color and add some styling */
     background-color: #3a3835;
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    font-family: 'Garamond', sans-serif;
+    font-family: 'Hack', monospace; /* Change the font to a childist beautiful text font */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ensure the title bar is above everything */
 }
 
 .title-bar .left {
+    /* Set the flex properties for the left section of the title bar */
     flex: 1;
     display: flex;
     justify-content: left;
@@ -20,21 +25,25 @@
 }
 
 .title-bar .left img {
+    /* Set the dimensions of the first logo image */
     height: 40px;
     width: 100px;
 }
 
 .title-bar .middle {
+    /* Set the flex properties for the middle section of the title bar */
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
 .title-bar .middle img {
+    /* Set the maximum height of the second logo image */
     max-height: 40px;
 }
 
 .title-bar .right {
+    /* Set the flex properties for the right section of the title bar */
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -42,6 +51,7 @@
 }
 
 .title-bar .right a {
+    /* Set the styling for the navigation links */
     margin-right: 40px;
     color: #ffffff;
     text-decoration: none;
@@ -51,15 +61,22 @@
     text-overflow: ellipsis;
 }
 
+.title-bar .right a:hover {
+    /* Change the text color on hover */
+    color: gray;
+}
+
 /* Estilos para la navbar */
 .navbar {
+    /* Set the background color and text color for the navbar */
     background-color: #ffffffef;
     color: #000000;
-    font-family: 'Garamond', sans-serif;
-    margin-top: 60px; /* Ajusta el margen superior */
+    font-family: 'Hack', monospace; /* Change the font to a childist beautiful text font */
+    margin-top: 60px; /* Adjust the top margin */
 }
 
 .navbar ul {
+    /* Remove the default list styles and set the flex properties for the navbar */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,10 +86,12 @@
 }
 
 .navbar ul li {
+    /* Set the display type for the list items */
     display: inline;
 }
 
 .navbar ul li a {
+    /* Set the styling for the navigation links */
     display: block;
     padding: 10px;
     color: #000000;
@@ -80,15 +99,25 @@
     font-weight: 700;
 }
 
-/* Estilos para el contenido principal */
+.navbar ul li a:hover {
+    /* Change the text color on hover */
+    color: gray;
+}
 
+/* Estilos para el contenido principal */
 .main-content {
+    /* Set the background image and position for the main content section */
     background-image: url('rabbits.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center;
+
+    /* Set the height and padding for the main content section */
     height: 900px;
     padding: 20px;
-    font-family: 'Garamond', sans-serif; 
+
+    /* Set the font family, color, and align the content in the center */
+    font-family: 'Hack', monospace; /* Change the font to "Hack" */
     color: #080808;
     display: flex;
     flex-direction: column;
@@ -98,41 +127,109 @@
 }
 
 .main-content .left {
+    /* Set the width for the left section of the main content */
     width: 300px;
 }
 
 .main-content .left h2 {
-    margin-top: -350px; /* Aumentamos el margen superior para mover el título más abajo */
+    /* Adjust the margin and font properties for the heading */
+    margin-top: -400px; /* Increase the top margin to move the title further down */
     font-weight: 700;
-    font-size: 48px; /* Aumentamos el tamaño del título */
+    font-size: 48px; /* Increase the font size of the title */
+    opacity: 0;
+    animation: slide-up 1s ease forwards;
 }
 
 .main-content .left p {
+    /* Adjust the margin and font size for the paragraph */
     margin-top: 10px;
-    font-size: 15px; /* Aumentamos el tamaño del párrafo */
+    font-size: 15px; /* Increase the font size of the paragraph */
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
 }
 
 .main-content .left button {
-    margin-top: 10px;
-    padding: 12px 18px;
+    /* Adjust the margin and add styling for the button */
+    margin-top: 30px; /* Move the button further down */
+    padding: 15px 25px; /* Increase the padding of the button */
     background-color: #000000;
     color: #fff;
     border: none;
-    font-family: 'Garamond', sans-serif; /* Cambiamos la fuente a Optima */
+    font-family: 'Hack', monospace; /* Change the font to "Hack" */
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
 }
 
 .main-content .left button:hover {
+    /* Adjust the background color on hover */
     background-color: #333333;
+}
+
+@keyframes slide-up {
+    /* Define the animation keyframes for sliding up */
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    /* Define the animation keyframes for fading in */
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Estilos para el footer */
 footer {
+    /* Set the background color, text color, padding, and text alignment for the footer */
     background-color: #3a3835;
     color: #ffffff;
-    font-family: 'Garamond', sans-serif;
+    font-family: 'Times New Roman', monospace; /* Change the font to a childist beautiful text font */
     padding: 1px;
     text-align: center;
+}
+
+/* Estilos para la imagen de conejito */
+.scroll-down-image {
+    /* Hide the scroll down image by default */
+    display: none;
+
+    /* Set the position, dimensions, and alignment of the bunny image */
+    position: fixed;
+    bottom: 200px; /* Adjust the position of the bunny image */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999; /* Ensure the bunny image is above everything */
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    animation: bunny-appear 1s;
+}
+
+.scroll-down-image.show {
+    /* Display the scroll down image when the class "show" is added */
+    display: block;
+    opacity: 1;
+}
+
+@keyframes bunny-appear {
+    /* Define the animation keyframes for the bunny image appearing */
+    0% {
+        transform: translateX(-50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
 }

@@ -1,0 +1,99 @@
+/* Estilos para la galería */
+.gallery-container {
+    /* Flex container properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Styling for image wrapper */
+  .image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for image container */
+  .image-container {
+    position: relative;
+  }
+  
+  /* Styling for gallery image */
+  #gallery-image {
+    max-width: 100%;
+    max-height: 100%;
+    /* Add fade-in animation to images */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  /* Styling for image description */
+  .image-description {
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    height: 3%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-family: 'Hack', monospace;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Styling for previous and next buttons */
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Styling for previous button */
+  .prev-btn {
+    position: absolute;
+    left: 10px;
+  }
+  
+  /* Styling for next button */
+  .next-btn {
+    position: absolute;
+    right: 10px;
+  }
+  
+  /* Styling for previous and next button hover effect */
+  .prev-btn:hover,
+  .next-btn:hover {
+    opacity: 1;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Add fade-in animation to image changes */
+  .gallery-container > .image-wrapper:not(:first-child) #gallery-image {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  

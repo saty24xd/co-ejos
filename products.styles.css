@@ -1,0 +1,74 @@
+/* Estilos para el contenido de la página de productos */
+.products-container {
+    padding: 50px;
+    text-align: center;
+}
+
+.products-container h1 {
+    font-family: 'Hack', monospace;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.category-selector {
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-family: 'Hack', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.product-item {
+    text-align: center;
+    animation: fade-in 1s ease;
+}
+
+.product-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+    font-family: 'Hack', monospace;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-family: 'Hack', monospace;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

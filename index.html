@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set the title of the webpage -->
+    <title>Coñejos Lindos</title>
+
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Include the Hack font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hack&display=swap" rel="stylesheet">
+
+    <!-- Set the favicon of the webpage -->
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <!-- Barra de título -->
+    <header class="title-bar">
+        <div class="left">
+            <!-- Add a link to the logo2.png image -->
+            <a href="index.html">
+                <img src="logo2.png" alt="Palabra">
+            </a>
+        </div>
+        <div class="middle">
+            <!--Add a link to the logo.png image-->
+            <a href="index.html">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="right">
+            <!-- Display navigation links -->
+            <a href="index.html">INICIO</a>
+            <a href="gallery.html">GALERÍA</a>
+            <a href="products.html">PRODUCTOS</a>
+            <a href="contact.html">CONTACTO</a>
+        </div>
+    </header>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">RAZAS</a></li>
+            <li><a href="#">CUIDADOS</a></li>
+            <li><a href="#">ALIMENTACIÓN</a></li>
+            <li><a href="#">CURIOSIDADES</a></li>
+            <li><a href="#">ADOPCIÓN</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="left">
+            <h2>COÑEJOS LINDOS</h2>
+            <p>¡Explora el mundo de los conejos y descubre su ternura y diversidad!</p>
+            <!-- Button to invoke the rabbit -->
+            <button id="discover-button" class="btn">INVOCAR COÑEJO</button>
+        </div>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2023 Coñejos Lindos by saty24xd. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Display the scroll down image -->
+    <img class="scroll-down-image" src="bunny.png" alt="Conejito">
+    
+    <!-- JavaScript to scroll to the bottom of the page -->
+
+    <script>
+        // Add a scroll event listener
+        window.addEventListener('scroll', function () {
+            // Get the scroll down image element
+            const scrollDownImage = document.querySelector('.scroll-down-image');
+            
+            // Get the height of the scrolled window and the total document height
+            const scrolledHeight = window.innerHeight + window.scrollY;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // Check if the scroll has reached 90% of the document height
+            if (scrolledHeight >= documentHeight * 0.9) {
+                // Add the "show" class to display the scroll down image
+                scrollDownImage.classList.add('show');
+            } else {
+                // Remove the "show" class to hide the scroll down image
+                scrollDownImage.classList.remove('show');
+            }
+        });
+
+        // Add a click event listener to the discover button
+        const discoverButton = document.getElementById('discover-button');
+        discoverButton.addEventListener('click', function () {
+            // Get the total document height and scroll smoothly to the bottom
+            const documentHeight = document.documentElement.scrollHeight;
+            window.scrollTo({ top: documentHeight, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
